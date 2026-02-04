@@ -1,0 +1,11 @@
+- hosts: minikube
+  become: true
+  tasks:
+    - name: Create Kubernetes Deployment
+      command: kubectl apply -f /home/ubuntu/Deployment.yml
+    - name: Create Kubernetes Service
+      command: kubectl apply -f /home/ubuntu/service.yml
+    - name: Verify Deployment rollout status
+      command: kubectl rollout status deployment/webapp
+    - name: Get Service details
+      command: kubectl get service webapp
