@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:centos7.9.2009
 MAINTAINER ngobinath@hotmail.com
 RUN yum install -y httpd
 WORKDIR /var/www/html/
