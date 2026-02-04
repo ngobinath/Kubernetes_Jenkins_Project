@@ -1,8 +1,7 @@
 FROM ubuntu:latest
 MAINTAINER ngobinath@hotmail.com
-RUN apt update && sudo apt upgrade -y    
-RUN apt install -y apache2
+RUN apt-get update && apt-get install -y apache2 && apt-get clean
 WORKDIR /var/www/html/
 RUN cp -rvf /home/ubuntu/WeddingPhoto.jpeg .
-CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
-EXPOSE 80 443
+CMD ["apache2ctl","-D","FOREGROUND"]
+EXPOSE 80
