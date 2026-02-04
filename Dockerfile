@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM ubuntu:latest
 MAINTAINER ngobinath@hotmail.com
 RUN yum update -y && \
     yum install -y curl --setopt=tsflags=nodocs && \
