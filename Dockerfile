@@ -6,4 +6,4 @@ RUN yum install -y httpd \
 ADD /var/lib/jenkins/workspace/pipeline-demo/WeddingPhoto.jpeg /var/www/html
 WORKDIR /var/www/html/
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
-EXPOSE 80 443
+EXPOSE 80 
