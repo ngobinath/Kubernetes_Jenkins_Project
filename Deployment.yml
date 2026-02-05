@@ -13,8 +13,8 @@ spec:
         app: webapp
     spec:
       containers:
-       - name: webapp
-         image: sngobhe/pipeline-demo
-         imagepullPolicy: Always
-         ports:
-         - containerPort: 80
+        - name: webapp
+          image: sngobhe/pipeline-demo
+          imagepullPolicy: Always
+          ports:
+            - containerPort: 80

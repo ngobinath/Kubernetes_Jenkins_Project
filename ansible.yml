@@ -1,6 +1,9 @@
 - hosts: minikube
   become: true
   tasks:
+    - name: Check if swap exists
+      shell: "swapon -s | grep -i dev|wc -l"
+      register: swap_exists
     - name: Create Kubernetes Deployment
       command: kubectl apply -f /home/ubuntu/Deployment.yml
     - name: Create Kubernetes Service
