@@ -18,4 +18,5 @@ spec:
           image: sngobhe/pipeline-demo
           imagepullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8080
+              protocol: TCP
